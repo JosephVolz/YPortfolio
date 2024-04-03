@@ -1,20 +1,12 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import React, {useState} from "react";
 import Logo from "./Logo";
-import { useRouter } from "next/router";
-import {
-  TwitterIcon,
-  DribbbleIcon,
-  GithubIcon,
-  LinkedInIcon,
-  PinterestIcon,
-  SunIcon,
-  MoonIcon,
-} from "./Icons";
-import { motion } from "framer-motion";
+import {useRouter} from "next/router";
+import {GithubIcon, LinkedInIcon, SunIcon, MoonIcon} from "./Icons";
+import {motion} from "framer-motion";
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
 
-const CustomLink = ({ href, title, className = "" }) => {
+const CustomLink = ({href, title, className = ""}) => {
   const router = useRouter();
   return (
     <Link href={href} className={`${className} relative group`}>
@@ -29,7 +21,7 @@ const CustomLink = ({ href, title, className = "" }) => {
     </Link>
   );
 };
-const CustomMobileLink = ({ href, title, className = "", toggle }) => {
+const CustomMobileLink = ({href, title, className = "", toggle}) => {
   const router = useRouter();
   const handleClick = () => {
     toggle();
@@ -43,7 +35,7 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
     >
       {title}
       <span
-        className={`h-[1px] inline-block bg-light absolute left-0 -bottom-0.5 group-hover:w-full 
+        className={`h-[1px] inline-block bg-light absolute left-0 -bottom-0.5 group-hover:w-full
         transition-[width] ease duration-300 dark:bg-dark ${
           router.asPath === href ? "w-full" : "w-0"
         }`}
@@ -93,54 +85,27 @@ const Navbar = () => {
         </nav>
         <nav className="flex items-center justify-center flex-wrap">
           <motion.a
-            href="https://twitter.com/AncoorBanerjee"
+            href="https://github.com/youmingliu421"
             target={"_blank"}
-            whileHover={{ y: -2 }}
-            className="w-6 mr-3"
-            whileTap={{ scale: 0.9 }}
-          >
-            <TwitterIcon />
-          </motion.a>
-          <motion.a
-            href="https://github.com/ancoor"
-            target={"_blank"}
-            whileHover={{ y: -2 }}
+            whileHover={{y: -2}}
             className="w-6 mx-3"
-            whileTap={{ scale: 0.9 }}
+            whileTap={{scale: 0.9}}
           >
             <GithubIcon />
           </motion.a>
           <motion.a
-            href="https://www.linkedin.com/in/ancoor/"
+            href="https://www.linkedin.com/in/youming-liu421"
             target={"_blank"}
-            whileHover={{ y: -2 }}
+            whileHover={{y: -2}}
             className="w-6 mx-3"
-            whileTap={{ scale: 0.9 }}
+            whileTap={{scale: 0.9}}
           >
             <LinkedInIcon />
           </motion.a>
-         {/*  <motion.a
-            href="https://twitter.com"
-            target={"_blank"}
-            whileHover={{ y: -2 }}
-            className="w-6 mx-3 bg-light rounded-full"
-            whileTap={{ scale: 0.9 }}
-          >
-            <PinterestIcon />
-          </motion.a>
-          <motion.a
-            href="https://twitter.com"
-            target={"_blank"}
-            whileHover={{ y: -2 }}
-            className="w-6 mx-3"
-            whileTap={{ scale: 0.9 }}
-          >
-            <DribbbleIcon />
-          </motion.a> */}
 
           <button
             onClick={() => setMode(mode === "light" ? "dark" : "light")}
-            className={`ease ml-3 flex items-center justify-center rounded-full p-1  
+            className={`ease ml-3 flex items-center justify-center rounded-full p-1
           ${mode === "light" ? "bg-dark  text-light" : "bg-light  text-dark"}`}
           >
             {mode === "dark" ? (
@@ -153,18 +118,14 @@ const Navbar = () => {
       </div>
       {isOpen ? (
         <motion.div
-        initial={{scale:0, opacity:0, x: "-50%", y: "-50%"}}
-        animate={{scale:1, opacity:1}}
+          initial={{scale: 0, opacity: 0, x: "-50%", y: "-50%"}}
+          animate={{scale: 1, opacity: 1}}
           className="min-w-[70vw] flex flex-col justify-between z-30 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
       bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32
       "
         >
           <nav className="flex items-center flex-col justify-center">
-            <CustomMobileLink
-              href="/"
-              title="Home"
-              toggle={handleClick}
-            />
+            <CustomMobileLink href="/" title="Home" toggle={handleClick} />
             <CustomMobileLink
               href="/about"
               title="About"
@@ -175,37 +136,23 @@ const Navbar = () => {
               title="Projects"
               toggle={handleClick}
             />
-            {/* <CustomMobileLink
-              href="/articles"
-              title="Articles"
-              toggle={handleClick}
-            /> */}
           </nav>
           <nav className="flex items-center justify-center flex-wrap mt-2">
             <motion.a
-              href="https://twitter.com/AncoorBanerjee"
+              href="https://github.com/youmingliu421"
               target={"_blank"}
-              whileHover={{ y: -2 }}
-              className="w-6 mr-3 sm:mx-1"
-              whileTap={{ scale: 0.9 }}
-            >
-              <TwitterIcon />
-            </motion.a>
-            <motion.a
-              href="https://github.com/ancoor"
-              target={"_blank"}
-              whileHover={{ y: -2 }}
+              whileHover={{y: -2}}
               className="w-6 mx-3 bg-light rounded-full dark:bg-dark sm:mx-1"
-              whileTap={{ scale: 0.9 }}
+              whileTap={{scale: 0.9}}
             >
               <GithubIcon />
             </motion.a>
             <motion.a
-              href="https://www.linkedin.com/in/ancoor/"
+              href="https://www.linkedin.com/in/youming-liu421"
               target={"_blank"}
-              whileHover={{ y: -2 }}
+              whileHover={{y: -2}}
               className="w-6 mx-3 sm:mx-1"
-              whileTap={{ scale: 0.9 }}
+              whileTap={{scale: 0.9}}
             >
               <LinkedInIcon />
             </motion.a>
@@ -230,7 +177,7 @@ const Navbar = () => {
 
             <button
               onClick={() => setMode(mode === "light" ? "dark" : "light")}
-              className={`ease ml-3 flex items-center justify-center rounded-full p-1  
+              className={`ease ml-3 flex items-center justify-center rounded-full p-1
           ${mode === "light" ? "bg-dark  text-light" : "bg-light  text-dark"}`}
             >
               {mode === "dark" ? (

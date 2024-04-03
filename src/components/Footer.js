@@ -8,17 +8,24 @@ const Footer = () => {
       <Layout className="py-8 flex items-center justify-between lg:flex-col lg:py-6">
         <span>{new Date().getFullYear()} &copy; All Rights Reserved</span>
         <div className="flex items-center lg:py-2">
-          Build with <span className="text-primary dark:text-primaryDark text-2xl px-1">&#9825;</span>{" "}
+          Build with{" "}
+          <span className="text-primary dark:text-primaryDark text-2xl px-1">
+            &#9825;
+          </span>{" "}
           by&nbsp;
           <Link
-            href="https://ancoor-portfolio.netlify.app/"
+            href="https://youmingliu.netlify.app/"
             className="underline underline-offset-2"
             target="_blank"
           >
-            Ancoor
+            Youming
           </Link>
         </div>
-        <Link href="whatsapp://send?phone=917773845893&text=Hello, I visited your profile ❤️." className="underline underline-offset-2" target="_blank">
+        <Link
+          href="whatsapp://send?phone=14353639580&text=Hello, I visited your profile ❤️."
+          className="underline underline-offset-2"
+          target="_blank"
+        >
           Say Hello
         </Link>
       </Layout>
