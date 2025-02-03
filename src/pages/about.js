@@ -58,7 +58,7 @@ const about = () => {
               <p className="font-medium">
                 - Hi, I'm Youming Liu, a full stack developer with a passion for
                 creating beautiful, functional, and user-centered digital
-                experiences. With 15 years of experience in the field. I am
+                experiences. With 9 years of experience in the field. I am
                 always looking for new and innovative ways to bring my clients'
                 visions to life.
               </p>

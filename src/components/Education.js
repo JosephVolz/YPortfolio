@@ -5,7 +5,7 @@ import {LiIcons} from "./LiIcons";
 const educationData = [
   {
     type: "Master of Science in Computer Science",
-    time: "Apr 2011 - Apr 2012",
+    time: "Feb 2014 - Apr 2015",
     place: "University of Pittsburgh",
     info: "Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and development in Python and AI",
   },

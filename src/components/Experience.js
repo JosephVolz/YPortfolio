@@ -1,71 +1,102 @@
-import React, {useRef} from "react";
-import {motion, useScroll} from "framer-motion";
-import {LiIcons} from "./LiIcons";
+import React, { useRef } from "react";
+import { motion, useScroll } from "framer-motion";
+import { LiIcons } from "./LiIcons";
 
 const experienceData = [
   {
-    postion: "Team Lead",
-    company: "Xpanse",
-    time: "Apr 2020-Present",
-    address: "Bellevue, WA",
-    companyLink: "https://www.xpanse.com/",
+    postion: "Senior Full Stack Developer",
+    company: "Toptal",
+    time: "Jun 2024-Present",
+    address: "Ellenton, FL",
+    companyLink: "https://www.toptal.com",
     work: [
-      "Led a team of 7 members while performing code reviews, scrum planning, writing technical documentation for newcomers and managing the tickets on the board.",
-      "Designed and built robust REST APIs with Python-Django Back-end systems by following the Serverless Architecture based on Amazon Web Services Lambda, S3, API Gateway and SQS.",
-      "Developed pixel perfect web and mobile frontend of LMS which processes data visualization and model using TypeScript, React, Apollo, GraphQL, Node.js, Ruby on Rails, Postgres and Material UI.",
-      "Spearheaded the transition of social web application from the old Angular application to a new React/Next.js app.",
-      "Implemented microservices architecture to upgrade efficiency of CRM system by 40%.",
-      "Led marketplace Android and iOS applications using React Native from scratch with develop team.",
-      "Mentored junior team members through pair programming to boost the team performance.",
+      "Designed and developed a cross-browser extension with a sophisticated dashboard leveraging Plasmo, T3-stack, and PostgreSQL.",
+      "Utilized Shadcn UI for intuitive UI design, Prisma for ORM, tRPC for seamless backend communication, and TurboRepo for efficient management of microservices within a monorepo architecture.",
+      "Championed the use of Jest, Vitest, and Cypress for rigorous unit and end-to-end testing, ensuring high-quality code and reliable software delivery.",
     ],
   },
   {
     postion: "Senior Full Stack Developer",
-    company: "Toptal",
-    time: "May 2016 - Apr 2020",
-    address: "Miami, FL",
+    company: "Fortunes Tech",
+    time: "Jan 2024 - July 2024",
+    address: "Goffstown, NH",
+    companyLink: "https://fortunes.tech",
     work: [
-      "Developed and maintained web applications for internal teams built with Python, PHP, React.js, NextJS and Typescript, NodeJS, Golang, NestJS.",
-      "Developed the Front-end for a PaaS solution that connects clients with insurance providers using ReactJS and Redux.",
-      "Developed serverless web applications with AWS Services like AWS Lambda, DynamoDB, S3, SNS, EC2, and so on.",
-      "Led development of complex key features and moved repositories to the Nx Monorepo.",
-      "Participated in Mobile Development and created Android version of existing iOS app.",
-      "Created the Desktop App for browsing AWS S3 files using Electron.",
-      "Promoted experience with Kubernetes, Docker, Firebase and TDD environment.",
+      "Led a team of 7 members while performing code review, scrum planning, writing technical documentation for newcomers and managing the tickets on the board.",
+      "Provide the full-stack development services utilizing the Typescript, React.js, MUI, NestJS, PostgreSQL, GraphQL, Docker, AWS and TerraForm.",
+      "Led the UI refactoring process utilizing Material-UI, TailwindCSS and Storybook.",
+      "Led the seamless migration from an Express backend with REST API to Nest.js with GraphQL, leveraging my advanced expertise to enhance performance, scalability, and maintainability of the application architecture.",
+      "Successfully orchestrated the transition from MongoDB to PostgreSQL, demonstrating advanced proficiency in database management and effectively optimizing the application's data storage and retrieval capabilities.",
+      "Designed and built robust Nest backend systems by following the Serverless Architecture based on AWS Services like AWS RDS, Lambda, API Gateway, S3, SQS, SNS, Elastic Beanstalk, CloudFormation, CloudFront.",
+      "Led Mobile Development including Android and iOS using React Native and Expo from scratch with engineering team.",
+    ],
+  },
+  {
+    postion: "Senior Full Stack Developer",
+    company: "Emergent Software",
+    time: "Oct 2020 - Dec 2023",
+    address: "Reston, VA",
+    companyLink: "http://www.emergentsoftware.net",
+    work: [
+      "Assisted over 10 startup companies and projects with extensive knowledge of Blockchain like Ethereum network.",
+      "Developed smart contracts for over 20 blockchain-related applications like Defi, NFT, P2E games and Metaverse projects.",
+      "Created bot systems for blockchain transaction automation, including trading bots, arbitrage, and liquidations.",
+      "Created API and WebSockets endpoints for live data feeds and direct connection to the front end.",
+      "Developed pixel-perfect, user-friendly Web3 front end applications utilizing React, Next, Vue and Angular.js based on Figma UI/UX design and integrated with various Solidity smart contracts using web3.js and ethers.js.",
+      "Optimized gas costs for a complex multi-layer smart contract replacing solidity code with in-line assembly.",
+      "Helped create an upgradable contract system through a proxy contract system.",
+      "Oversaw and led the development of a decentralized and distributed team across four different time zones to build a full-stack application.",
     ],
   },
   {
     postion: "Full Stack Developer",
-    company: "AIS",
-    time: "Aug 2013 - May 2016",
-    address: "Reston, VA",
-    companyLink: "https://www.ais.com/",
+    company: "JOOR",
+    time: "Jan 2018 - Sep 2020",
+    address: "New York, NY",
+    companyLink: "https://www.joor.com",
     work: [
-      "Designed and developed Back-end RESTful APIs using Node.JS, Express, Nest.js, PHP, Laravel, Python, Django, Flask, MongoDB, PostgreSQL, MySQL, Redis, AWS and Firebase.",
-      "Translated Figma, Adobe XD designs to pixel-perfect and fully responsive design using JavaScript, TypeScript and its libraries React, Vue, Angular and HTML, CSS, SCSS and LESS.",
+      "Designed and developed backend RESTful APIs with a diverse tech stack, including Node.js, Express, NestJS, PHP, Laravel, Python(Django, Flask), and databases like MongoDB, PostgreSQL, MySQL, and Redis, leveraging AWS and Firebase for scalable cloud solutions.",
+      "Translated Figma, Adobe XD designs to pixel-perfect and fully responsive design using JavaScript, TypeScript and its libraries ReactJS, NextJS, Remix, Vue, Angular, HTML, CSS, SCSS, and LESS.",
       "Migrated a healthcare web application from the LAMP stack application to a modern MERN stack app.",
-      "Implemented real-time communication functionalities using Web Socket technology.",
+      "Implemented real-time communication functionalities using Web Socket and React-query.",
       "Implemented Stripe API integration with payment flow, trial periods, monthly and yearly subscriptions, and withdrawals.",
       "Created automated testing framework in Jest, Mocha + Chai + Simon for unit testing and e2e UI testing.",
-      "Implemented CI/CD pipelines in each step of the development cycle which improved integration and delivery towards agile methodologies.",
+      "Implemented CI/CD pipelines using GitLab Actions in each step of the development cycle which improved integration and delivery towards agile development methodologies.",
+    ],
+  },
+  {
+    postion: "Software Engineer",
+    company: "Stride",
+    time: "Jun 2016 - Dec 2017",
+    address: "New York, NY",
+    companyLink: "https://www.stride.build",
+    work: [
+      "Architected and developed robust, cross-browser-compatible health care front-end using JavaScript, TypeScript, React, and Next.js.",
+      "Engineered scalable Rest APIs with Express.js, ensuring high performance and reliability.",
+      "Implemented advanced state management and UI styling utilizing Redux, redux-saga, and TailwindCSS.",
+      "Designed and optimized database operations with PostgreSQL, and enforced high code quality standards using Jest for comprehensive testing.",
+      "Spearheaded the acceleration of code delivery by introducing a Continuous Integration (CI) and Continuous Delivery (CD) pipeline, dramatically improving deployment efficiency.",
+      "Established and maintained scalable project infrastructures on Google Cloud Platform, ensuring optimal performance and scalability.",
+      "Ensured project stability and reduced defects by rigorously applying TypeScript and implementing automated testing strategies with industry standard testing frameworks.",
     ],
   },
   {
     postion: "Web Developer",
-    company: "Dexian",
-    time: "Apr 2012 - Aug 2013",
-    address: "Reston, VA",
-    companyLink: "https://www.ais.com/",
+    company: "AgileEngine",
+    time: "May 2015 - May 2016",
+    address: "Boca Raton, FL",
+    companyLink: "https://agileengine.com",
     work: [
-      "Transformed design mock-ups into HTML5/CSS3 layouts and created Responsive Web libraries by utilizing the main styling tools and stuffs in agile development team.",
-      "Supported and improved the UI of internal tools to manage the backend of a big Scandinavian telecommunication provider using JavaScript, Angular, and React.",
-      "Participated in development of Ecommerce and CRM systems with Drupal, WordPress and OOP, MVC structure, Laravel, SQL, Git and followed Pixel Perfect design and implementation.",
-      "Cooperated with the UI/UX department to create a new look and feel for the website, implemented changes with jQuery library extensions, Ajax & CSS.",
+      "Engineered and deployed robust websites leveraging PHP MVC frameworks such as Laravel and CodeIgniter to ensure maintainable and scalable architecture.",
+      "Led the planning and execution of website development, transforming design mockups into fully functional, responsive web interfaces using Angular, HTML5, CSS, JavaScript, AJAX, and JSON.",
+      "Implemented critical security maintenance and patching protocols on website interfaces, ensuring post-launch viability and protecting against vulnerabilities.",
+      "Developed custom modules and libraries that are highly customizable and easily reusable, enhancing development efficiency and consistency.",
+      "Designed and transitioned legacy websites into modern, mobile-friendly platforms, utilizing responsive design techniques to create seamless user experiences across devices.",
     ],
   },
 ];
 
-const Details = ({postion, company, companyLink, time, address, work}) => {
+const Details = ({ postion, company, companyLink, time, address, work }) => {
   const ref = useRef(null);
   return (
     <li
@@ -74,9 +105,9 @@ const Details = ({postion, company, companyLink, time, address, work}) => {
     >
       <LiIcons reference={ref} />
       <motion.div
-        initial={{y: 50}}
-        whileInView={{y: 0}}
-        transition={{duration: 0.5, type: "spring"}}
+        initial={{ y: 50 }}
+        whileInView={{ y: 0 }}
+        transition={{ duration: 0.5, type: "spring" }}
       >
         <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg">
           {postion}&nbsp;
@@ -102,7 +133,7 @@ const Details = ({postion, company, companyLink, time, address, work}) => {
 };
 const Experience = () => {
   const ref = useRef(null);
-  const {scrollYProgress} = useScroll({
+  const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "center start"],
   });
@@ -115,7 +146,7 @@ const Experience = () => {
         <motion.div
           className="absolute left-9 top-1 w-[4px] h-full bg-dark origin-top dark:bg-light md:w-[2px] md:left-[30px] xs:left-[20px]"
           ref={ref}
-          style={{scaleY: scrollYProgress}}
+          style={{ scaleY: scrollYProgress }}
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
           {experienceData.map((companyData, index) => {
